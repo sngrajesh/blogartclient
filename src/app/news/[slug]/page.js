@@ -3,7 +3,7 @@ import React from "react";
 export const revalidate = 172800;
 // export const revalidate = 1;
 export async function generateStaticParams() {
-  const news = await fetch("https://blogartserver.onrender.com//api/v1/news").then((res) =>
+  const news = await fetch("https://blogartserver.onrender.com/api/v1/news").then((res) =>
     res.json()
   );
   return news.results.map((n) => ({ slug: n.slug }));
@@ -13,7 +13,7 @@ const Page = async ({ params }) => {
   let news = null;
   try {
     const response = await fetch(
-      `https://blogartserver.onrender.com//api/v1/news/${params.slug}`
+      `https://blogartserver.onrender.com/api/v1/news/${params.slug}`
     );
     const data = await response.json();
     news = data?.result;
