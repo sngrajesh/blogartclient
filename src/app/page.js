@@ -30,7 +30,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center space-y-4  mt-[50vh]">
+      <div className="flex flex-col items-center justify-center space-y-4  mt-[50vh] mb-[30vh]">
         <h2 className="text-4xl font-bold text-center text-gray-800">
           Features
         </h2>
